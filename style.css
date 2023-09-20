@@ -15,6 +15,11 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(239, 239, 232),rgba(214, 221, 232, 0.25));
+}
+.flex{
+    display: flex;
+    align-items: center;
 }
 p{
     font-family: "Roboto",sans-serif;
@@ -26,7 +31,7 @@ a{
 ul{
     list-style: none;
 }
-.navbar-container{
+.container{
     max-width: 1180px;
     margin-inline:auto;
     overflow: hidden;
@@ -41,8 +46,6 @@ nav{
     z-index: 999;
 }
 .navbar{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 12px 0;
 }
@@ -87,6 +90,7 @@ nav{
     border-radius:4px;
     outline: none;
     border: .5px solid gray;
+    font-family: "Roboto",sans-serif;
 }
 .search-btn{
     padding:9px 12px;
@@ -97,7 +101,44 @@ nav{
     font-weight:400;
     transition: background 0.4s;
     cursor: pointer;
+    font-family: "Roboto",sans-serif;
+
 }
 .search-btn:hover{
     background: var(--accent-color-dark);
+}
+
+section{
+    margin-top: 80px;
+    padding-block: 20px;
+}
+.card-container{
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.card{
+    width: 350px;
+    min-height: 400px;
+    box-shadow: .01px .01px 5px .01px #b2b1b1;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform: translateY(-2px);
+}
+.card-image img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content{
+    padding:13px;
+}
+#news-source{
+    margin-block:13px;
 }

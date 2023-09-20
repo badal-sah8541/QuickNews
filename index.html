@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-         <div class="navbar navbar-container">
+         <div class="navbar container flex">
               <a href="#" class="logo">QuickNews</a>
               <div class="nav-links">
                   <ul>
@@ -23,15 +23,25 @@
               </div>
          </div>
     </nav>
- 
+    
+    <section>
+        <div class="card-container container flex" id="cards-container">
+        
+        </div>
+    </section>
 
-
-
-
-
-
-
-
+    <template id="news-card">
+          <div class="card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x200" alt="cardImage" id="news-image">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the title</h3>
+                    <h4 id="news-source">End Gadets 18/09/2023</h4>
+                    <p id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis nemo accusantium natus possimus sunt maxime dolores, impedit nihil fugiat tempore!</p>
+                </div>
+            </div>
+    </template>
     <script src="app.js"></script>
 </body>
 </html>
