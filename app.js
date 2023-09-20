@@ -6,8 +6,11 @@ window.addEventListener('load',() => fetchNews("India"));
 
 async function fetchNews(query){
     const response = await fetch(`${url}${query}&apiKey=${apiKey}`);
+    console.log(response);
     const data = await response.json();
+    
     bindData(data.articles);
+    
 }
 
 function bindData(articles){
@@ -19,8 +22,8 @@ function bindData(articles){
     articles.forEach(article => {
         if(!article.urlToImage) return;
         const cardClone = cardNews.content.cloneNode(true);
-        cardContainer.appendChild(cardClone);
         fillDataInCard(cardClone, article);
+        cardContainer.appendChild(cardClone);
     });
 }
 
